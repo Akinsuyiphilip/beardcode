@@ -41,7 +41,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-
+ 
         <section className="home">
           <div className="loader">
             <div className="loader-children"></div>
