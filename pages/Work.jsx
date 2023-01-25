@@ -1,6 +1,10 @@
 import Head from "next/head";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import dynamic from "next/dynamic";
 
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 
 const work = () => {
   return (
@@ -12,7 +16,7 @@ const work = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-     
+      <AnimatedCursor innerSize={10} outerSize={20} />
         <div className="navbar">
           <h1 className="logo">BeardKoda</h1>
           <div className="likend">
