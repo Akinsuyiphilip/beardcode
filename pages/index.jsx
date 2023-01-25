@@ -30,7 +30,7 @@ export default function Home() {
               {" "}
               Resume
             </a>
-            <a className="navlink" href="/Work">
+            <a className="navlink" href="/Work"> 
               {" "}
               Works
             </a>
