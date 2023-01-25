@@ -1,4 +1,3 @@
-
 :root {
   --color-cursor: 220, 90, 90;
   --cursor-outline-shade: 0.3;
@@ -10,13 +9,12 @@
   padding: 0;
   margin: 0;
   cursor: none;
-} 
+}
 
 body {
   color: white;
   background: black;
   font-family: monospace;
- 
 }
 
 a {
@@ -32,18 +30,17 @@ a {
   padding: 1rem 5rem 1rem 2rem;
 }
 .logo {
-font-size: 2rem;
-color: white;
-text-align: center;
-font-family: monospace;
-
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  font-family: monospace;
 }
-.likend{
+.likend {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-.navlink{
+.navlink {
   text-decoration: none;
   color: #fc6d6d;
   align-items: center;
@@ -52,24 +49,76 @@ font-family: monospace;
   font-size: 1rem;
   font-family: monospace;
 }
-.navlink:hover{
+.navlink:hover {
   color: white;
 }
 
 /* section home styles */
-.textdiv{
+.home {
+  width: 100%;
+  height: 705px;
+  max-height: max-content;
+  position: relative;
+}
+.text-container,
+.loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loader {
+  z-index: 2;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+.loader .loader-children {
+  height: 100%;
+  width: calc(100vw / 5);
+  flex: 1;
+  background-color: blue;
+  border: thin solid white;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.loader .loader-children:first-child {
+  border-left: 0;
+}
+.loader .loader-children:last-child {
+  border-right: 0;
+}
+.loader .loader-children:nth-child(odd) {
+  animation: rollup;
+}
+.loader .loader-children:nth-child(even) {
+  animation: rolldown;
+
+}
+
+@keyframes rollup{
+  from{
+    height: 0%;
+  }
+  to{
+    height: 100%;
+  }
+}
+
+.textdiv {
   display: flex;
   position: relative;
   top: 15rem;
   right: 0;
   flex-direction: column;
 }
-.typincon{
+.typincon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.typingtext{
+.typingtext {
   overflow: hidden;
   color: #fc6d6d;
   white-space: nowrap;
@@ -79,25 +128,25 @@ font-family: monospace;
   font-size: 3rem;
   font-family: monospace;
 }
-.about{
+.about {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
   color: white;
 }
-.about .static{
+.about .static {
   color: #fff;
   font-size: 60px;
   font-weight: 400;
 }
-.about .dynamic{
-margin-left: 10px;
-height: 90px;
-line-height: 90px;
-overflow: hidden;
+.about .dynamic {
+  margin-left: 10px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
 }
-.dynamic li{
+.dynamic li {
   list-style: none;
   font-size: 60px;
   font-weight: 500;
@@ -106,39 +155,38 @@ overflow: hidden;
   color: #fc6d6d;
   animation: slide 6s steps(4) infinite;
 }
-@keyframes slide{
-  100%{
-   top: -360px;
+@keyframes slide {
+  100% {
+    top: -360px;
   }
 }
 
-.dynamic li span{
+.dynamic li span {
   position: relative;
 }
-.dynamic li span::after{
- content: "";
- position: absolute;
- height: 90px;
- width: 100%;
- background: #000;
- border-left: 2px solid #fc6d6d;
- left: 0;
- animation: typing 1.5s steps(20) infinite;
+.dynamic li span::after {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 100%;
+  background: #000;
+  border-left: 2px solid #fc6d6d;
+  left: 0;
+  animation: typing 1.5s steps(20) infinite;
 }
-@keyframes typing{
-  100%{
+@keyframes typing {
+  100% {
     left: 100%;
     margin: 0 -35px 0 35px;
   }
 }
 
-
 /* section footer styles */
-.sfooter{
+.sfooter {
   position: sticky;
   padding-right: 3rem;
 }
-.socials{
+.socials {
   position: fixed;
   top: 30rem;
   right: 5rem;
@@ -146,7 +194,7 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-.follow{
+.follow {
   padding-right: 30px;
   position: absolute;
   bottom: 10rem;
@@ -173,7 +221,7 @@ overflow: hidden;
 .follow:hover {
   color: #fc6d6d;
 }
-.icons{
+.icons {
   padding-right: 1px;
   padding-top: 2rem;
   font-size: 1rem;
@@ -181,35 +229,35 @@ overflow: hidden;
 .icons:hover {
   color: #fc6d6d;
 }
-.contacti{
+.contacti {
   position: fixed;
   left: 0;
   top: 43rem;
   margin-left: 2rem;
 }
-.emailnum{
+.emailnum {
   margin: 7px 0 0 0;
   font-size: 14px;
   color: white;
 }
 /* section home styles */
-.resumeText{
+.resumeText {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
   position: relative;
 }
-.maintext{
+.maintext {
   font-size: 7rem;
 }
-.locationfile{
+.locationfile {
   position: absolute;
   top: 40rem;
   left: 20rem;
   font-size: 1.2rem;
 }
-.locationfile span{
+.locationfile span {
   color: gray;
 }
 @media (prefers-color-scheme: dark) {
@@ -217,4 +265,3 @@ overflow: hidden;
     color-scheme: dark;
   }
 }
-

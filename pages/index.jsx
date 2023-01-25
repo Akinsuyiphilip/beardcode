@@ -19,6 +19,7 @@ export default function Home() {
       <main>
         {/* <AnimCursor /> */}
         <AnimatedCursor innerSize={10} outerSize={20} />
+
         <div className="navbar">
           <h1 className="logo">BeardKoda</h1>
           <div className="likend">
@@ -30,7 +31,7 @@ export default function Home() {
               {" "}
               Resume
             </a>
-            <a className="navlink" href="/Work"> 
+            <a className="navlink" href="/Work">
               {" "}
               Works
             </a>
@@ -42,27 +43,36 @@ export default function Home() {
         </div>
 
         <section className="home">
-          <div className="textdiv">
-            <div className="textcon">
-              <div className="typingtext">Hey I'm BeardKoda</div>
-            </div>
+          <div className="loader">
+            <div className="loader-children"></div>
+            <div className="loader-children"></div>
+            <div className="loader-children"></div>
+            <div className="loader-children"></div>
+            <div className="loader-children"></div>
+          </div>
+          <div className="text-container">
+            <div className="textdiv">
+              <div className="textcon">
+                <div className="typingtext">Hey I'm BeardKoda</div>
+              </div>
 
-            <div className="about">
-              <div className="static">I'm a</div>
-              <ul className="dynamic">
-                <li>
-                  <span> Freelancer</span>
-                </li>
-                <li>
-                  <span> Designer</span>
-                </li>
-                <li>
-                  <span> Developer</span>
-                </li>
-                <li>
-                  <span> Software-Engineer</span>
-                </li>
-              </ul>
+              <div className="about">
+                <div className="static">I'm a</div>
+                <ul className="dynamic">
+                  <li>
+                    <span> Freelancer</span>
+                  </li>
+                  <li>
+                    <span> Designer</span>
+                  </li>
+                  <li>
+                    <span> Developer</span>
+                  </li>
+                  <li>
+                    <span> Software-Engineer</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
